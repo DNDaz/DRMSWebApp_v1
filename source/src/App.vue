@@ -72,6 +72,7 @@
           menuItems = [
             {icon: 'supervisor_account', title: 'View Assessments', link: '/meetups'},
             {icon: 'room', title: 'Create New Risk Assessment', link: '/meetup/new'},
+            {icon: 'assessment', title: 'All Assessments', link: '/assessments'},
             {icon: 'person', title: 'Profile', link: '/profile'}
           ]
         }

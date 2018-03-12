@@ -29,8 +29,6 @@ new Vue({
   store,
   render: h => h(App),
   created () {
-    console.log('on the created app hook' + FirebaseConfig)
-    console.log(FirebaseConfig)
     firebase.initializeApp(
       FirebaseConfig
     )
@@ -38,6 +36,7 @@ new Vue({
       if (user) {
         this.$store.dispatch('autoSignIn', user)
         this.$store.dispatch('fetchUserData')
+        // For signed in user also load profile
       }
     })
     this.$store.dispatch('loadMeetups')

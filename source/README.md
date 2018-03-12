@@ -1,6 +1,6 @@
-# yt-devmeetup-vue
+# Dolomite Risk Management Application
 
-A dev meetup application built with Vue + Vuetify + Firebase.
+A Dolomite Risk Managent  application built with Vue + Vuetify + Firebase.
 
 ## Build Setup
 

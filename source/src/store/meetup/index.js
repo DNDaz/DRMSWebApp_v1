@@ -6,18 +6,18 @@ export default {
       {
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg',
         id: 'afajfjadfaadfa323',
-        title: 'Meetup in New York',
+        title: 'Water Supply Assesment ',
         date: new Date(),
-        location: 'New York',
-        description: 'New York, New York!'
+        location: 'Main Building',
+        description: 'Water Meter Readings Above Average'
       },
       {
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Paris_-_Blick_vom_gro%C3%9Fen_Triumphbogen.jpg',
         id: 'aadsfhbkhlk1241',
-        title: 'Meetup in Paris',
+        title: 'The Ground Surface Subsidence near MBSA Building',
         date: new Date(),
-        location: 'Paris',
-        description: 'It\'s Paris!'
+        location: 'Mercedes Benz Workshop',
+        description: 'It\'s reported that the might be a water leak!'
       }
     ]
   },
