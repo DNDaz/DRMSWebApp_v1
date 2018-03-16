@@ -1,7 +1,19 @@
 <template>
   <v-container>
+    <v-flex xs12 sm6 offset-sm3>
+      <v-card fill-height>
+        <v-card-media class="myClass" src="/static/l.png" height="500px" >
+        </v-card-media>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">Mercedes Benz</h3>
+            <div>Welcome to Mercedes Benz Dolomite Risk Management App.</div>
+          </div>
+        </v-card-title>
+      </v-card>
+    </v-flex>
     <v-layout row wrap>
-      <v-flex xs12 sm6 class="text-xs-center text-sm-right">
+      <v-flex>
         <v-btn large router to="/meetups" class="info">Explore Assessments and Reports</v-btn>
       </v-flex>
       <v-flex xs12 sm6 class="text-xs-center text-sm-left">
@@ -60,6 +72,13 @@
 </script>
 
 <style scoped>
+  .container {
+    background: #444;
+  
+  }
+  .main {
+    background: #444;
+  }
   .title {
     position: absolute;
     bottom: 50px;
@@ -68,4 +87,30 @@
     font-size: 2em;
     padding: 20px;
   }
+  /* .myClass {
+    padding-bottom: 20%;
+    background: yellow;
+    margin: 0 auto;
+    }
+   .myClass img.wide {
+    max-height: 100%;
+    width: auto;
+   } */
+    .myClass {
+    width: 100%;
+    height: 100%;
+    background: #444;
+    margin: 0 auto;
+    } 
+  .myClass img.wide {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+  }
+  .myClass img.tall {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+}
+
 </style>

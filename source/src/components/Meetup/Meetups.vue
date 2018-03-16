@@ -18,8 +18,8 @@
                     <div>{{ meetup.date | date }}</div>
                   </div>
                 </v-card-title>
-                <v-card-actions>
-                  <v-btn flat :to="'/meetups/' + meetup.id">
+                <v-card-actions class="greyish">
+                  <v-btn flat :to="'/meetups/' + meetup.id" >
                     <v-icon left light>arrow_forward</v-icon>
                     View Assessment
                   </v-btn>
@@ -30,7 +30,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </v-container>
+    </v-container>
 </template>
 
 <script>
@@ -40,5 +40,53 @@
         return this.$store.getters.loadedMeetups
       }
     }
-  }
+}
 </script>
+<style scoped>
+  .container {
+    background: #fff;
+  
+  }
+  .main {
+    background: #444;
+  }
+  .title {
+    position: absolute;
+    bottom: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+  }
+  .greyish {
+    background-color: #673232;
+    width: 40%;
+  }
+  /* .myClass {
+    padding-bottom: 20%;
+    background: yellow;
+    margin: 0 auto;
+    }
+   .myClass img.wide {
+    max-height: 100%;
+    width: auto;
+   } */
+    .myClass {
+    width: 100%;
+    height: 100%;
+    background: #444;
+    margin: 0 auto;
+    } 
+  .myClass img.wide {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+  }
+  .myClass img.tall {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+}
+
+</style>
+
