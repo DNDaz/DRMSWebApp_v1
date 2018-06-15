@@ -21,12 +21,12 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar dark class="primary">
+    <v-toolbar  color="grey lighten-4">
       <v-toolbar-side-icon
         @click.stop="sideNav = !sideNav"
         class="hidden-sm-and-up "></v-toolbar-side-icon>
       <v-toolbar-title>
-        <router-link to="/" tag="span" style="cursor: pointer">Dolomite Risk Web App</router-link>
+        <router-link to="/" tag="span" style="cursor: pointer">DRMS App</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
@@ -37,8 +37,22 @@
           :to="item.link">
           <v-icon left dark>{{ item.icon }}</v-icon>
           {{ item.title }}
-
+          <v-menu :nudge-width="100" v-if="item.showSubMenus">
+          <v-toolbar-title slot="activator">
+            <span>All</span>
+            <v-icon dark>arrow_drop_down</v-icon>
+        </v-toolbar-title>
+        <v-list>
+          <v-list-tile 
+          v-for="myItem in subMenuItems" 
+          :key="myItem.subTitle" 
+          :to="myItem.link">
+            <v-list-tile-title v-text="myItem"></v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
         </v-btn>
+        
         <v-btn
           v-if="userIsAuthenticated"
           flat
@@ -50,6 +64,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <main>
+      
       <router-view></router-view>
     </main>
   </v-app>
@@ -59,7 +74,12 @@
   export default {
     data () {
       return {
-        sideNav: false
+        sideNav: false,
+        subMenuItems: [
+          {subTitle: 'Water Mains Inspection', link: '/assessments/watersupplies'},
+          {subTitle: 'Stormwater Inspection', link: '/assessments/stormwaters'},
+          {subTitle: 'Sewer Inspection ', link: '/assessments/stormwaters'}
+        ]
       }
     },
     computed: {
@@ -70,21 +90,45 @@
         ]
         if (this.userIsAuthenticated) {
           menuItems = [
-            {icon: 'supervisor_account', title: 'View Assessments', link: '/meetups'},
-            {icon: 'room', title: 'Create New Risk Assessment', link: '/meetup/new'},
-            {icon: 'assessment', title: 'All Assessments', link: '/assessments'},
-            {icon: 'person', title: 'Profile', link: '/profile'}
+            {icon: 'supervisor_account', title: 'Data Collection', link: '/datacollection', showSubMenus: false},
+            {icon: 'open_in_new', title: 'Manage Process', link: '/allassessments', showSubMenus: true},
+            {icon: 'assessment', title: 'Reporting', link: '/assessments', showSubMenus: false},
+            {icon: 'person', title: this.getLoggedUser(), link: '/profile', showSubMenus: false}
           ]
         }
         return menuItems
       },
       userIsAuthenticated () {
         return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+      },
+      getLoggedInUser () {
+        return 'Anonymous'
+        /* if (this.userIsAuthenticated()) {
+          return this.$store.getters.user.email
+        } else {
+          return 'Anonymous'
+        } */
       }
     },
     methods: {
       onLogout () {
         this.$store.dispatch('logout')
+      },
+      showMenus () {
+        // How to show all menus
+      },
+      getLoggedUser () {
+        // Get the logged in user display name or email address
+        if (this.$store.getters.user !== null && this.$store.getters.user !== undefined) {
+          // return this.$store.getters.user.email
+          console.log('User Email is' + this.$store.getters.user.email)
+          return 'Does Get Here'
+        } else {
+          return 'Lundi Songo'
+          // this.$store.getters.user.getEmail ()
+        }
+        // this.$store.getters.user.email
+        // return this.$store.getters.user.email
       }
     }
   }

@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
 import meetup from './meetup'
 import user from './user'
 import shared from './shared'
-import watersupply from './watersupply'
+import waterTightness from './waterTightness'
 import groundsurface from './groundsurface'
 import dolomiteaquifer from './dolomiteaquifer'
 import internalsewer from './internalsewer'
@@ -18,7 +17,7 @@ export const store = new Vuex.Store({
     meetup: meetup,
     user: user,
     shared: shared,
-    watersupply: watersupply,
+    waterTightness: waterTightness,
     groundsurface: groundsurface,
     dolomiteaquifer: dolomiteaquifer,
     internalsewer: internalsewer,

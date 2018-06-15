@@ -1,50 +1,204 @@
 export default {
   state: {
-    loadedWaterSurfaces: [
+    waterSupplyMainConnectionAnnualInspection: {
+      id: '234hsdr723nn00',
+      fid: '001',
+      title: 'Regular Annual Maintenance Inspection For Main Supply',
+      inspectionDate: '2018-050-12',
+      nextInspectionDate: '2018-050-12',
+      inspectionBy: 'Anonymous',
+      isAllWaterConnectionsInspected: true,
+      isMainIncludingStopCockInspected: false,
+      isSchedulingRepairs: true,
+      isSchedulingContractors: false,
+      isSchedulingMunicipality: true,
+      isLaundryConnectionChecked: false,
+      isAllFacilitiesChecked: false,
+      internalPersonResponsibleContact: '',
+      plumberResponsibleContact: '',
+      municipalWaterDivisionContact: '',
+      year: ''
+    },
+    individualFacilityWaterSupplyAnnualInspections: [
       {
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg',
-        id: 'afajfjadfaadfa323',
-        title: 'Water Supply Assesment ',
-        date: new Date(),
-        location: 'Main Building',
-        description: 'Water Meter Readings Above Average',
-        assessperiod: 'annual'
+        facilityID: 'qwew2324',
+        facilityName: 'Entrance',
+        stopCock: '',
+        isLandry: '',
+        isResidentialStructure: '',
+        actionTaken: '',
+        leakageStatus: 'No Leakage',
+        year: '',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: '',
+        pulmberCertification: '',
+        municipalWaterDivisionContact: '',
+        quarter: ''
       },
       {
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Paris_-_Blick_vom_gro%C3%9Fen_Triumphbogen.jpg',
-        id: 'aadsfhbkhlk1241',
-        title: 'The Ground Surface Subsidence near MBSA Building',
-        date: new Date(),
-        location: 'Mercedes Benz Workshop',
-        description: 'It\'s reported that the might be a water leak!',
-        assessperiod: 'quarterly'
+        facilityID: '232zdfd4',
+        facilityName: 'Entrance',
+        stopCock: '',
+        isLandry: '',
+        isResidentialStructure: '',
+        actionTaken: '',
+        leakageStatus: 'No Leakage',
+        year: '',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: '',
+        pulmberCertification: '',
+        municipalWaterDivisionContact: '',
+        quarter: ''
       },
       {
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg',
-        id: 'afajfjadfaadfa325',
-        title: 'Water Supply Assesment ',
-        date: new Date(),
-        location: 'Main Building',
-        description: 'Water Meter Readings Above Average',
-        assessperiod: 'biannual'
+        facilityID: '1232f324',
+        facilityName: 'Entcrance',
+        stopCock: '',
+        isLandry: '',
+        isResidentialStructure: '',
+        actionTaken: '',
+        leakageStatus: 'No Leakage',
+        year: '',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: '',
+        pulmberCertification: '',
+        municipalWaterDivisionContact: '',
+        quarter: ''
       },
       {
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Paris_-_Blick_vom_gro%C3%9Fen_Triumphbogen.jpg',
-        id: 'aadsfhbkhlk1246',
-        title: 'The Ground Surface Subsidence near MBSA Building',
-        date: new Date(),
-        location: 'Mercedes Benz Workshop',
-        description: 'It\'s reported that the might be a water leak!',
-        assessperiod: 'fiveyears'
+        facilityID: 'gt662324544dd',
+        facilityName: 'Entrance',
+        stopCock: '',
+        isLandry: '',
+        isResidentialStructure: '',
+        actionTaken: '',
+        leakageStatus: 'No Leakage',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: '',
+        pulmberCertification: '',
+        municipalWaterDivisionContact: '',
+        year: '',
+        quarter: ''
       },
       {
-
-      },
-      {
-
+        facilityID: '04394932nsd2324',
+        facilityName: 'Entrance',
+        stopCock: '',
+        isLandry: '',
+        isResidentialStructure: '',
+        actionTaken: '',
+        leakageStatus: 'No Leakage',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: '',
+        pulmberCertification: '',
+        municipalWaterDivisionContact: '',
+        year: '',
+        quarter: ''
       }
-
-    ]
+    ],
+    finalRegularMaintenanceInspection: {
+      id: '234hsdr723nn00',
+      fid: '001',
+      title: 'Regular Annual Maintenance Inspection',
+      inspectionDate: '2018-050-12',
+      nextInspectionDateInFiveYears: '2018-050-12',
+      inspectionBy: 'Anonymous',
+      isSewerLinePressureTested: '',
+      year: ''
+    },
+    individualRegularFacilityInspections: [
+      {
+        facilityID: 'sjfh2324',
+        facilityName: 'Entrance',
+        inspectionDate: '',
+        dateOfNextInsoection: '',
+        actionTypeTake: 'Repair',
+        manholeNumber: 'manhole1',
+        pressureStatus: 'No pressure loss',
+        quarter: '',
+        actionTaken: 'Repair Complete',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: ''
+      },
+      {
+        facilityID: 'losd2444324',
+        facilityName: 'Entrance',
+        inspectionDate: '',
+        dateOfNextInsoection: '',
+        actionTypeTake: 'Repair',
+        manholeNumber: 'manhole2',
+        pressureStatus: 'pressure loss',
+        quarter: '',
+        actionTaken: 'Repair InProgresss ',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: ''
+      },
+      {
+        facilityID: 'losd9324',
+        facilityName: 'Entrance',
+        inspectionDate: '',
+        dateOfNextInsoection: '',
+        actionTypeTake: 'Repair',
+        manholeNumber: 'manhole3',
+        pressureStatus: 'pressure loss',
+        quarter: '',
+        actionTaken: 'Repair Starting',
+        internalPersonResponsibleContact: '',
+        plumberResponsibleContact: ''
+      }
+    ],
+    regularMaintenanceInspections: {
+      facilityID: 'losd932412',
+      facilityName: 'Entrance',
+      inspectionDate: '',
+      dateOfNextInsoection: '',
+      actionTypeTake: 'Repair',
+      manholeNumber: 'manhole3',
+      pressureStatus: 'pressure loss',
+      quarter: '',
+      actionTaken: 'Repair Starting',
+      internalPersonResponsibleContact: '',
+      plumberResponsibleContact: ''
+    },
+    seasonalMaintenanceInspections: {
+      facilityID: 'losd9324098',
+      facilityName: 'Entrance',
+      inspectionDate: '',
+      dateOfNextInsoection: '',
+      actionTypeTake: 'Repair',
+      manholeNumber: 'manhole3',
+      pressureStatus: 'pressure loss',
+      quarter: '',
+      actionTaken: 'Repair Starting',
+      internalPersonResponsibleContact: '',
+      plumberResponsibleContact: ''
+    },
+    visualMonthlyServicesInspections: {
+      facilityID: 'losd93246588',
+      facilityName: 'Entrance',
+      inspectionDate: '',
+      dateOfNextInsoection: '',
+      actionTypeTake: 'Repair',
+      manholeNumber: 'manhole3',
+      pressureStatus: 'pressure loss',
+      quarter: '',
+      actionTaken: 'Repair Starting',
+      internalPersonResponsibleContact: '',
+      plumberResponsibleContact: ''
+    },
+    visualGroundSurfaceMonitoring: {
+      facilityID: 'losd93247gt66',
+      facilityName: 'Entrance',
+      inspectionDate: '',
+      dateOfNextInsoection: '',
+      actionTypeTake: 'Repair',
+      manholeNumber: 'manhole3',
+      pressureStatus: 'pressure loss',
+      quarter: '',
+      actionTaken: 'Repair Starting',
+      internalPersonResponsibleContact: '',
+      plumberResponsibleContact: ''
+    }
   },
   getters: {
     getAllWaterSupplies (state) {

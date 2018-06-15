@@ -3,7 +3,7 @@
 A Dolomite Risk Managent  application built with Vue + Vuetify + Firebase.
 
 ## Build Setup
-
+# ensure your are at source folder
 ``` bash
 # install dependencies
 npm install

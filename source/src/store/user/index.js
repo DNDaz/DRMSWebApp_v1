@@ -65,7 +65,8 @@ export default {
             const newUser = {
               id: user.uid,
               registeredMeetups: [],
-              fbKeys: {}
+              fbKeys: {},
+              useremail: user.email
             }
             commit('setUser', newUser)
           }
@@ -88,6 +89,7 @@ export default {
             const newUser = {
               id: user.uid,
               registeredMeetups: [],
+              useremail: user.email,
               fbKeys: {}
             }
             commit('setUser', newUser)
@@ -105,7 +107,8 @@ export default {
       commit('setUser', {
         id: payload.uid,
         registeredMeetups: [],
-        fbKeys: {}
+        fbKeys: {},
+        useremail: payload.email
       })
     },
     fetchUserData ({commit, getters}) {

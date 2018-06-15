@@ -13,13 +13,21 @@ export default {
       },
       {
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Paris_-_Blick_vom_gro%C3%9Fen_Triumphbogen.jpg',
-        id: 'aadsfhbkhlk1241',
+        id: 'aquiadsfhbkhlk1241',
         title: 'The Ground Surface Subsidence near MBSA Building',
         date: new Date(),
         location: 'Mercedes Benz Workshop',
         description: 'It\'s reported that the might be a water leak!'
       }
-    ]
+    ],
+    mercLogo: {
+      imageUrl: '/static/l.png',
+      id: 'afajfjadfaadfa327',
+      title: 'Welcome To DOlomite Risk App ',
+      date: new Date(),
+      location: 'Main Building',
+      description: 'Water Meter Readings Above Average'
+    }
   },
   mutations: {
     setLoadedMeetups (state, payload) {
@@ -137,6 +145,7 @@ export default {
       })
     },
     featuredMeetups (state, getters) {
+      // if getters.loadedMeetups. != %2
       return getters.loadedMeetups.slice(0, 5)
     },
     loadedMeetup (state) {
@@ -145,6 +154,9 @@ export default {
           return meetup.id === meetupId
         })
       }
+    },
+    mercLogos (state) {
+      return state.mercLogo
     }
   }
 }
